@@ -291,7 +291,7 @@ def get_meeting_details(meeting_id):
     return meeting
 
 def main():
-    st.title('CS348 Stage 2')
+    st.title('CS348 Stage 3')
 
     menu = ['Add Meeting', 'Edit Meeting', 'Delete Meeting', 'Generate Report']
     choice = st.sidebar.selectbox('Menu', menu)
