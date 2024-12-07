@@ -5,10 +5,10 @@ from datetime import datetime
 
 def connect():
     return mysql.connector.connect(
-        host='localhost',
-        user='root',
+        host=st.secrets['HOST'],
+        user=st.secrets['USER'],
         password=st.secrets['MYSQL_PASSWORD'],
-        database='stage2'
+        database=st.secrets['DATA']
     )
 
 def add_meeting(cursor, meeting_data):

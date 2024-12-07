@@ -25,10 +25,10 @@ def generate_report(cursor, start_date, end_date, club_id=None, room_id=None):
 
 def main():
     connect = mysql.connector.connect(
-        host='localhost',
-        user='root',
+        host=st.secrets['HOST'],
+        user=st.secrets['USER'],
         password=st.secrets['MYSQL_PASSWORD'],
-        database='stage2'
+        database=st.secrets['DATA']
     )
     cursor = connect.cursor(prepared=True)
 
